@@ -4,10 +4,10 @@ require('dotenv').config();
 const jwt = require('jsonwebtoken');
 const { connection } = require('./config/db');
 const {UserModel} = require('./model/userModel');
-const { default: mongoose } = require('mongoose');
+const { mongoose } = require('mongoose');
 
 const app = express();
-mongoose.set('strictQuery',true)
+mongoose.set('strictQuery',true);
 app.use(express.json());
 app.use(cors({
     origin:'*'
